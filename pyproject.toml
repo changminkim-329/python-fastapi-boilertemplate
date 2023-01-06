@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "x-fit"
+version = "0.1.0"
+description = ""
+authors = ["wootae-bs <wootae.jung@beautyselection.co.kr>"]
+readme = "README.md"
+packages = [{include = "x_fit"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.88.0"}
+httpx = "^0.23.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+pytest = "^7.2.0"
+mypy = "^0.991"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
