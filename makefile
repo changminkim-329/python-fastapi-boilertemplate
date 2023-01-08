@@ -9,6 +9,7 @@ format:
 hook:
 	chmod 744 ./git-hooks/install_hooks.sh
 	chmod 744 ./git-hooks/pre-push
+	chmod 744 ./git-hooks/pre-commit
 	./git-hooks/install_hooks.sh
 	
 
