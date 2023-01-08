@@ -34,5 +34,9 @@ pylint제외 이유 : 코드 표준을 준수여부를 체크하는 파이린트
 독스트링 무조건 필수적으로 작성해야하고 불필요한 에러 때문에 개발속도가 느려질 수 있음
 
 reference
-https://kimjingo.tistory.com/203
-https://seonghyeon.dev/keep-python-code-clean-with-git-hook-and-makefile
+
+- [makefile-githook](https://seonghyeon.dev/keep-python-code-clean-with-git-hook-and-makefile)
+- [[Python] 코드 검사 자동화(Mypy를 사용한 타입 힌팅, Pylint를 사용한 코드 검사)](https://kimjingo.tistory.com/203)
+
+
+- [fastapi 자습서에소개된 fullstack](https://github.com/tiangolo/full-stack-fastapi-postgresql/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D/backend/app/app)
