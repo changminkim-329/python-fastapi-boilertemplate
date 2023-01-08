@@ -12,7 +12,7 @@ if [ $? -ne 0 ]; then
   echo -e "\e[31m [\!] mypy failed! Run 'make format'"
   exit 1
 fi
-echo -e "\e[32m [+] black success!"
+echo -e "\e[32m [+] black success!!"
 
 mypy app/ tests/ --show-error-context --pretty --strict > /dev/null 2>&1
 if [ $? -ne 0 ]; then
