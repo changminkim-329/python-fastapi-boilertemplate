@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+isort app/ tests/ --multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=120 --check-only > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "-e \e[31m [\!] isort failed! Run 'make format'"
+  exit 1
+fi
+echo -e "\e[32m [+] isort success!"
+
+black app/ tests/ --line-length=80 > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo -e "\e[31m [\!] mypy failed! Run 'make format'"
+  exit 1
+fi
+echo -e "\e[32m [+] black success!"
+
+mypy app/ tests/ --show-error-context --pretty --strict > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo -e "\e[31m [!] mypy failed! Please fix code before push"
+  exit 1
+fi
+echo -e "\e[32m [+] mypy success!"
+echo -e "\e[0m"
+exit 0
