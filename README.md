@@ -16,7 +16,20 @@ mypy = "^0.991"
 
 ```
 
-여담
+## 폴더구조
+```
+api -> controller/{resource}.py
+core -> core : 서비스에 꼭 필요한 정보들 토큰,환경변수,
+crud -> crud/{resource}.py repo와 비슷한 느낌
+db/ -> 연결하고 세션만들기
+models/{resource}.py 엔티티 + base엔티티
+schemas/{resource}.py 스키마들/리소스
+middlewares/ -> client와 controller 
+utils/ -> 날짜/s3버킷 등 담당하는 객체 또는 함수
+```
+
+
+## 여담
 pylint제외 이유 : 코드 표준을 준수여부를 체크하는 파이린트는
 독스트링 무조건 필수적으로 작성해야하고 불필요한 에러 때문에 개발속도가 느려질 수 있음
 
