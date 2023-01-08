@@ -1,6 +1,6 @@
 check:
-	isort app/ tests/ --multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=120 --check-only
-	black app/ tests/ --line-length=80 > /dev/null 2>&1
+	isort app/ tests/ --multi-line=1 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=80
+	black app/ tests/ --line-length=80
 	mypy app/ tests/ --show-error-context --pretty --strict
 	pytest tests/ --cache-clear -vv --color=yes
 format:
