@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from models.base import *
 
 app = FastAPI()
 
